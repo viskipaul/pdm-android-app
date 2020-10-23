@@ -3,26 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/CarListFragment">
+
+<!--    <fragment-->
+<!--        android:id="@+id/ItemListFragment"-->
+<!--        android:name="com.viskipaul.laboratory.todo.items.ItemListFragment"-->
+<!--        android:label="@string/first_fragment_label"-->
+<!--        tools:layout="@layout/fragment_item_list">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
+<!--            app:destination="@id/ItemEditFragment" />-->
+<!--    </fragment>-->
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.viskipaul.laboratory.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/CarListFragment"
+        android:name="com.viskipaul.laboratory.todo.items.CarListFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_car_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/CarEditFragment"/>
     </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/ItemEditFragment"-->
+<!--        android:name="com.viskipaul.laboratory.todo.item.ItemEditFragment"-->
+<!--        android:label="@string/second_fragment_label"-->
+<!--        tools:layout="@layout/fragment_item_edit">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/ItemListFragment" />-->
+<!--    </fragment>-->
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.viskipaul.laboratory.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/CarEditFragment"
+        android:name="com.viskipaul.laboratory.todo.item.CarEditFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_car_edit">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/CarListFragment" />
     </fragment>
 </navigation>
